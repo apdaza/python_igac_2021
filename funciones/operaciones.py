@@ -26,3 +26,15 @@ def fibbo(n):
             contador += 1
             
         return f
+
+def fibbo_recursivo(n):
+    if n == 1:
+        return 0
+    if n == 2:
+        return 1
+    return fibbo_recursivo(n -1) + fibbo_recursivo(n -2)
+
+def potencia_recursiva(b, e):
+    if e == 0:
+        return 1
+    return potencia_recursiva(b, e-1) * b
