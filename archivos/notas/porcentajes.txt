@@ -1,0 +1,3 @@
+primera, 35
+segunda, 35
+tercera, 30

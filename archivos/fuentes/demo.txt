@@ -1,0 +1,3 @@
+Hola Mundo! Bienvenidos a demo.txt
+Un ejemplo de asrchivo para usar
+Buena suerte!

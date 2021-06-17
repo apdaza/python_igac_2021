@@ -1,0 +1,3 @@
+f = open("notas.csv")
+lineas = f.readlines()
+print(lineas)

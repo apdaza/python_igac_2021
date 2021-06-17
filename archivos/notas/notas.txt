@@ -1,0 +1,4 @@
+juan, cálculo, 35, 50, 15
+maria, cálculo, 50, 45, 47
+juan, programación, 35, 50, 50
+maria, programación, 35, 45, 40

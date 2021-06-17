@@ -1,0 +1,4 @@
+juan en cálculo tiene 34
+maria en cálculo tiene 47
+juan en programación tiene 44
+maria en programación tiene 40
