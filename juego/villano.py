@@ -3,9 +3,9 @@ from pygame.sprite import Sprite
 import util
 
 class Villano(Sprite):
-    def __init__(self, coordenadas, velocidad):
+    def __init__(self, coordenadas, velocidad, imagen):
         Sprite.__init__(self)
-        self.image = util.cargar_imagen("imagenes/chinchilla.png")
+        self.image = util.cargar_imagen(imagen)
         self.rect = self.image.get_rect()
         self.rect.move_ip(coordenadas[0], coordenadas[1])
         self.direccion = "izquierda"

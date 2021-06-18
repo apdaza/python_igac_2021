@@ -2,6 +2,7 @@ import sys, pygame, util
 from pygame.locals import *
 from heroe import *
 from villano import *
+from random import randint
 
 SCREEN_WIDTH = 640
 SCREEN_HEIGHT = 480
@@ -18,15 +19,18 @@ fondo = util.cargar_imagen("imagenes/fondo.jpg")
 pygame.mouse.set_visible(False)
 
 heroe = Heroe()
-villanos = [Villano((100, 120), 7), Villano((200, 280), 10)]
-
+villanos = [Villano((100, 120), 7, "imagenes/chinchilla.png"),
+            Villano((200, 280), 10, "imagenes/ZB1.png"),
+            Villano((300,370), 5, "imagenes/chinchilla.png")]
+agregado = False
 while jugando:
     heroe.update()
     texto_vida = fuente.render("Vida: " + str(heroe.vida), 1, (250, 250, 250))
+    texto_puntos = fuente.render("Puntos: " + str(heroe.puntos), 1, (250, 250, 250))
     screen.blit(fondo, (0, 0))
     screen.blit(heroe.image, heroe.rect)
     screen.blit(texto_vida, (20, 10))
-    heroe.image = heroe.images[0]
+    screen.blit(texto_puntos, (500, 10))
     for v in villanos:
         v.update()
         screen.blit(v.image, v.rect)
@@ -34,6 +38,7 @@ while jugando:
             heroe.vida -= 1
             heroe.image = heroe.images[2]
             
+    
     if heroe.vida <= 0:
         jugando = False
     
@@ -41,6 +46,12 @@ while jugando:
         if event.type == pygame.QUIT:
             sys.exit()
 
+    if heroe.puntos % 5 == 0 and agregado == False:
+        villanos.append(Villano((randint(100, 300),randint(100,300)), randint(3, 10), "imagenes/chinchilla.png"))
+        agregado = True
+    if heroe.puntos % 5 != 0 and agregado == True:
+        agregado = False
+        
     pygame.display.update()
     pygame.time.delay(10)
 

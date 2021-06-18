@@ -13,6 +13,8 @@ class Heroe(Sprite):
         self.rect = self.image.get_rect()
         self.rect.move_ip(200, 10)
         self.vida = 100
+        self.puntos = 0
+        self.seguro = "arriba"
 
     def update(self):
         teclas = pygame.key.get_pressed()
@@ -22,6 +24,13 @@ class Heroe(Sprite):
             self.rect.x -= 10
         elif teclas[pygame.K_UP] and self.rect.y >= 10:
             self.rect.y -= 10
-            
+            self.image  = self.images[1]
         elif teclas[pygame.K_DOWN] and self.rect.y <= 480 - self.rect.height:
             self.rect.y += 10
+            self.image  = self.images[0]
+        if self.seguro == "arriba" and self.rect.y + self.rect.height >= 480:
+            self.puntos += 1
+            self.seguro = "abajo"
+        if self.seguro == "abajo" and self.rect.y <= 0:
+            self.puntos += 1
+            self.seguro = "arriba"
