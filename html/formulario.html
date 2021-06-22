@@ -3,6 +3,7 @@
     <head>
         <title>Ejemplo HTML5</title>
         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
     </head>
     <body>
         <nav>
@@ -15,6 +16,17 @@
         </nav>
         <section>
             <h1>Ejemplo de formulario</h1>
+            <form method="POST" action="">
+                Nombre: <input type="text" name="ctrl_nombre" placeholder="Nombre del usuario"><br>
+                Correo: <input type="email" name="ctrl_mail" required><br>
+                Fecha de nacimiento: <input type="date" name="ctrl_fecha"><br>
+                Color favorito: <input type="color" name="ctrl_color"><br>
+                Mes: <input type="month" name="ctrl_mes"><br>
+                Intervalo: <input type="range" name="ctrl_intervalo" min="10" max="20">
+
+                <input type="submit" value="OK">
+
+            </form>
         </section>
         
     </body>
