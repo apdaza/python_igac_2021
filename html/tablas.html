@@ -5,6 +5,14 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="estilo.css" media="screen">
         <link rel="stylesheet" type="text/css" href="estilo_print.css" media="print">
+        <script>
+            function dibujar(){
+                var contexto = document.querySelector("canvas").getContext("2d");
+                contexto.fillStyle = "#ffff00";
+                contexto.fillRect(10, 10, 100, 150);
+            }
+            window.onload = dibujar;
+        </script>
     </head>
     <body>
         <nav>
@@ -35,6 +43,10 @@
                 </tr>
             </table>
         </section>
+
+        <canvas>
+
+        </canvas>
         
     </body>
 </html>
