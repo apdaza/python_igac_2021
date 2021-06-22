@@ -1,4 +1,4 @@
-#Ejercicios propuestos:
+# Ejercicios propuestos:
 
 Para cada uno de los siguientes ejercicios generar el programa en que resuelva el problema.
 
