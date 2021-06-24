@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resumen</title>
+    </head>
+    <body>
+        <h1>Resumen</h1>
+        <ul>
+            <li>Estructura original: {{ formas[0]}}</li>
+            <li>Estructura agrupada por ciudad: {{ formas[1]}}</li>
+            <li>Estructura agrupada por genero: {{ formas[2]}}</li>
+        </ul>
+        {{tablas[0]|safe}}
+        <img src="data:image/png;base64,{{ plot_img[0] }}">
+        {{tablas[1]|safe}}
+        <img src="data:image/png;base64,{{ plot_img[1] }}">
+    </body>
+</html>
